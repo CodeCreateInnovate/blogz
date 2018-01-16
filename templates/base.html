@@ -1,13 +1,18 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
+<html>
+  <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="{{url_for('static', filename='styles.css')}}" type="text/css" />
     <title>{{title}}</title>
-</head>
-<body>
-    {% block content %}
-    {% endblock %}
-</body>
+  </head>
+  <body>
+    <div>
+      <nav>
+        <h1 class="title"><a href="/blog" style="color: white;">Build a Blog</a></h1>
+        <a href="/post" class="left" style="color: white;">New Post</a>
+      </nav>
+      {% block content %}
+      {% endblock %}
+    </div>
+  </body>
 </html>
