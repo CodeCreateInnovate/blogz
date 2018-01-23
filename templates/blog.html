@@ -1,15 +1,17 @@
 {% extends "base.html" %}
 
 {% block content %}
-      <div style="background-color: gray;">
-        {% if blogs|length == 0 %}
-        <p>No blogs yet</p>
-        {% endif %}
-        {% for blog in blogs %}
-        <h1><a href="/blog?id={{blog.id}}" style="color:white;">{{blog.title}}</a></h1>
-        <p style="color: white;">{{blog.body}}</p>
+      <div class="blog">
+        <h1 class="blog_title">Blog Posts</h1>
         <hr>
-        {% endfor %}
+          {% for post in posts %}
+          <div>
+            <a href="/blog?id={{post.id}}"><p><h2>{{ post.title }}</h2></p></a>
+            <p>{{post.body}}</p>
+            <p>Creation Date: {{ post.pub_date }}</p>
+            <p>Created by: <a href="/blog?userid={{post.owner_id}}">{{ post.owner.username }}</a></p>
+          </div>
+          {% endfor %}
       </div>
 {% endblock %}
 

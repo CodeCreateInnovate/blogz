@@ -1,15 +1,20 @@
 <!DOCTYPE html>
 <html>
-  <head>
+  <header>
     <meta charset="UTF-8">
     <link rel="stylesheet" href="{{url_for('static', filename='styles.css')}}" type="text/css" />
     <title>{{title}}</title>
-  </head>
+  </header>
   <body>
     <div>
       <nav>
-        <h1 class="title"><a href="/blog" style="color: white;">Build a Blog</a></h1>
-        <a href="/post" class="left" style="color: white;">New Post</a>
+        <h1><a href="/">Welcome To Blogz</a></h1>
+        <ul>
+          <li><a href="/blog">Rad Posts</a></li>
+          <li><a href="/newpost">Add a Rad Post</a></li>
+          <li><a href="/logout">I'm Done, Logout</a></li>
+          <li><a href="/login">Let's Rock, Login</a></li>
+        </ul>
       </nav>
       {% block content %}
       {% endblock %}
