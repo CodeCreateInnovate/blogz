@@ -1,6 +1,5 @@
 from flask import Flask, request, redirect, render_template, session, flash
 from flask_sqlalchemy import SQLAlchemy
-# Imports for timestamps and password hashing utilities.
 from datetime import datetime
 from password_hash import make_pw_hash, check_pw_hash
 
@@ -11,7 +10,7 @@ app.config['DEBUG'] = True
 app.config['SQLALCHEMY_DATABASE_URI'] = 'mysql+pymysql://blogz:blogz@localhost:8889/blogz'
 app.config['SQLALCHEMY_ECHO'] = True
 
-app.secret_key = 'D$J(vYJ*DWt$CtfiNt4K7Gy^'
+app.secret_key = '(WQA9UnsiAP;ZRvfd;m6>Gv.'
 db = SQLAlchemy(app)
 
 
